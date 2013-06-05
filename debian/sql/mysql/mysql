@@ -1,7 +1,7 @@
 create table domains (
  id    INT auto_increment,
  name    VARCHAR(255) NOT NULL,
- master    VARCHAR(20) DEFAULT NULL,
+ master    VARCHAR(39) DEFAULT NULL,
  last_check  INT DEFAULT NULL,
  type    VARCHAR(6) NOT NULL,
  notified_serial INT DEFAULT NULL, 
@@ -28,7 +28,7 @@ CREATE INDEX nametype_index ON records(name,type);
 CREATE INDEX domain_id ON records(domain_id);
 
 create table supermasters (
-  ip VARCHAR(25) NOT NULL, 
+  ip VARCHAR(39) NOT NULL,
   nameserver VARCHAR(255) NOT NULL, 
   account VARCHAR(40) DEFAULT NULL
 );
